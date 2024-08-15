@@ -60,6 +60,7 @@ if ! dpkg -s libjpeg-dev >/dev/null 2>&1; then
   apt-get update
   apt-get install -y libjpeg-dev
 fi
+git config --global http.postBuffer 1073741824
 pip3 install changedetection.io --upgrade &>/dev/null
 pip3 install playwright --upgrade &>/dev/null
 systemctl restart changedetection
