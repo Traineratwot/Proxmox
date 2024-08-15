@@ -61,6 +61,7 @@ if ! dpkg -s libjpeg-dev >/dev/null 2>&1; then
   apt-get install -y libjpeg-dev
 fi
 git config --global http.postBuffer 1073741824
+git clone --depth 1 https://github.com/browserless/chrome /opt/browserless
 pip3 install changedetection.io --upgrade &>/dev/null
 pip3 install playwright --upgrade &>/dev/null
 systemctl restart changedetection
